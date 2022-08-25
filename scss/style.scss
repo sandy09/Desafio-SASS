@@ -1,0 +1,151 @@
+@import "base/variables";
+@import "base/extend";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+}
+
+/*CSS HEADER*/
+header{
+    background-color: $color-principal;
+    position: sticky;
+    top:0;
+    div{
+        nav{
+            font-size: large;
+            color: $color-hoverlink;
+            --bs-navbar-hover-color: $color-hoverlink; 
+            div{
+                .navbar-brand{
+                    margin-right: 20px;
+                    
+                }
+                button{
+                    color: $color-fuente-light;
+
+                }
+                div{
+                    .nav-link{
+                        color: $color-fuente-light;
+                        padding: 10px;
+                        text-decoration: none;
+                        border-right: 1px solid $color-fuente-light;
+
+                    }
+                }
+
+            }
+        }        
+    }
+}
+/*CSS BANNER*/
+.bannerPromo{
+    background-color: $color-atencion;
+    @extend %flex-column-all-center;
+
+    .bannerPromo__texto{
+        color: $color-fuente-light;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+
+}
+body{
+    background-color: $color-secundario;
+}
+main{
+    background-color: $color-secundario;
+    .contenido{
+        .contenedorFiltros{
+            height: $height-1;
+            @extend %flex-spacearound-center;
+            border-bottom: 1px solid $color-fuente-light;
+            .contenedorFiltros__filtro{
+                .filtro__boton{
+                    @extend %formato-botones-filtro;
+                }
+            }
+            .contenedorFiltros__texto{
+                color: $color-fuente-dark;
+                border: 2px dotted white;
+                padding: 20px;
+
+            }
+            .contenedorFiltros__orden{
+                .orden__boton{
+                    @extend %formato-botones-filtro;
+                }
+            }
+        }
+        .contenedorProductos{
+            height: $height-2;
+            @extend %flex-spacearound-center;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            padding-bottom:50px;
+            .contenedorProductos__card{
+                height: $card-height;
+                width: $card-width;
+                display: inline-block;
+                .card__img{
+                    height: $card-height;
+                    width: $card-width;
+                }
+                .card__nombre{
+                    padding-top: 10px;
+                    margin-top: 10px;
+                    text-align: center;
+                    border-top: 1px solid white;
+
+                }
+                .card__precio{
+                    color: $color-atencion;
+                    font-size: x-large;
+                    text-align: center;
+                }
+                .card__preciodesc{
+                    text-align: center;
+                    font-style: italic;
+                    text-decoration: line-through;
+                
+
+                }
+            }
+
+        }
+    }
+}
+footer{
+    background-color: $color-principal;
+    .contenedorMapa{
+        display: inline;
+        .contenedorMapa__mapa{
+            margin-top:20px;
+            margin-left:20px;
+        }
+    }
+    .redes{
+        display: inline;
+        margin-left:20%;
+        a{
+            .redes__iconos{
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+        }
+    }
+    .redes__texto{
+        font-size: small;
+        text-align: end;
+        padding-right: 20px;
+        padding-bottom: 5px;
+
+    }
+}
+

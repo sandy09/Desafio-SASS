@@ -1,0 +1,21 @@
+%flex-column-all-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+%flex-spacearound-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+%formato-botones-filtro{
+    background-color: white !important;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
